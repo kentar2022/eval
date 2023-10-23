@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vincent Parrot - Garage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,100&family=Mukta:wght@200&family=Open+Sans:wght@500&family=Oxygen:wght@300&family=Raleway:ital,wght@1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="avis_main.js"></script>
+  <link rel="icon" href="images/icon.ico">
+</head>
+<body>
+<header>
+    <div class="header_container">
+      <img src="images/icon.png" class="icon">
+      <h1 class="icon_text">Vincent Parrot</h1>
+    </div>
+    <div class="desktop_navbar">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#nos-services">Nos services</a></li>
+                <li><a href="#a-propos">À propos de nous</a></li>
+                <li><a href="#horaire">Horaire</a></li>
+                <li><a href="voitures.html">Voitures d'occasion</a></li>
+                <li>
+                <button>
+                <a href="#contact">Appelez nous</a>
+                </button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<hr class="header_hr">
+
+<div class="preview__text">
+  <h1>Service de voiture à Toulouse</h1>
+  <p>Réparation et peinture de voitures professionnelles à des prix abordables et garantis dans les délais</p>
+</div>
+<section id="accueil">
+<div class="container">
+    <div class="block_accueil_h1">
+        <h1>Bienvenue chez Vincent Parrot Garage</h1>
+        <hr>
+    </div>
+
+    <p>Nous sommes un garage spécialisé dans la réparation et l'entretien automobile à Toulouse. <br>
+    Notre équipe expérimentée, avec 15 ans d'expérience, offre des services de réparation de carrosserie et de mécanique automobile, ainsi que des services d'entretien régulier pour garantir la fiabilité et la sécurité de votre véhicule.</p>
+</div>
+<div class="bluecar"></div>
+</section>
+
+
+<section id="avantages">
+    <div class="container__avantages">
+      <div class="avantages_h1">
+        <h1>Avantages</h1>
+        <div class="avantages_hr"> 
+            <hr class="blue_hr">
+            <hr class="red_hr">
+        </div>
+      </div>
+      <div class="block_avantages">
+        <div class="block_avantages_element">
+            <img src="images/mechanic.ico" class= "avantages_icon">
+            <h2>Personnel qualifié</h2>
+            <p>Notre entreprise est fière de notre personnel hautement qualifié</p>
+        </div>
+        <div class="block_avantages_element">
+            <img src="images/banknote.png" class= "avantages_icon">
+            <h2>Prix compétitifs</h2>
+            <p>Nous proposons des prix compétitifs pour nos services sans compromettre la qualité!</p>
+        </div>
+        <div class="block_avantages_element">
+            <img src="images/rate.ico" class= "avantages_icon">
+            <h2>Clients satisfaits</h2>
+            <p>La satisfaction de nos clients est notre priorité absolue</p>
+        </div>
+        <div class="block_avantages_element">
+            <img src="images/calendar.ico" class= "avantages_icon">
+            <h2>Livraison de la voiture à temps!</h2>
+            <p>Nous comprenons que votre temps est précieux. Les délais sont strictement respectés !</p>
+        </div>
+    </div>
+</section>
+
+
+<section id="informations">
+    <div class="informations_block">
+   <div>
+     <div class="block_informations_h1">
+       <h1>Information</h1>
+       <hr>
+     </div>
+     <div class="informations_text">
+       <p>Nous offrons également une gamme complète de services aux entreprises et aux particuliers. Contrôle technique, diagnostic et dépannage, réparations de toute complexité, commande  pièces détachées, lavage et entreposage de voitures la qualité de nos services est confirmé par des certificats de conformité !</p>
+      <button class="button__information">Inscrivez-vous</button>
+    </div>
+  </div>
+  <div>
+    <div class="block_informations_h1">
+      <h1>À propos de nous</h1>
+      <hr>
+    </div>
+    <div class="informations_text">
+      <p>Diagnostic automobile;<br>
+        Réparation du système de freinage;<br>
+       Vente des véhicules d'occasion;<br>
+        Réparation de systèmes d'échappement;<br>
+        Réparation de moteur ;<br>
+        Peinture de véhicules;<br>
+        …</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="avis" class="avis">
+    <div class="comment__block">
+        <div class="placeholder__block">
+        <div class="placeholder">
+            <h1>Lessez votre avis:</h1>
+            <form id="comment-form" method="POST" action="save_data.php">
+              <label for="nickname">Votre note:</label>
+                      <select type="text" class="form-control" id="note" name="user_rating">
+                        <option value="01">1</option>
+                        <option value="02">2</option>
+                        <option value="03">3</option>
+                        <option value="04">4</option>
+                        <option value="05">5</option>
+                      </select>
+              <br>
+              <br>
+              <label for="nickname">Votre prénom:</label>
+              <input type="text" id="nickname" name="user_nickname">
+              <br>
+              <br>
+              <textarea id="placeholder-text" rows="7" cols="60" name="user_comment"></textarea>
+              <br>
+              <input type="submit" value="Envoyer" class="submit__button">
+            </form>
+        </div>
+        </div>
+        <hr>
+        <div class="placeholder__block comments__wrapper">
+            <div class="avis_block placeholder">
+              <h1>Les avis:</h1>
+              <div id="comments" class="comments"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="contact" class="contact">
+  <div class="block__white">
+    <div class="block_contact_h1">
+      <h1>S'inscrire au service</h1>
+      <hr class="inscription_hr">
+    </div>
+    <div class="inscription_block">
+      <div class="inscription_placeholder_block" style="max-width: 90%; height: 450px; background-color: rgba(197, 0, 26, 0.7); padding: 10px;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-around; margin-bottom: 40px; margin-top: 30px;">
+          <div style="width: 40%; margin-left: 40px;">
+            <input type="text" placeholder="Entrez votre prénom . . ." style="width: 70%; height: 23px; margin-bottom: 10px; background-color: #D9D9D9; border: none;">
+            <input type="text" placeholder="Entrez votre nom . . ." style="width: 70%; height: 23px; margin-bottom: 10px; background-color: #D9D9D9; border: none;">
+          </div>
+          <div style="width: 40%;">
+            <input type="email" placeholder="Entrez votre email . . ." style="width: 70%; height: 23px; margin-bottom: 10px; background-color: #D9D9D9; border: none;">
+            <input type="tel" placeholder="Entrez votre numéro . . ." style="width: 70%; height: 23px; margin-bottom: 10px; background-color: #D9D9D9; border: none;">
+          </div>
+        </div>
+        <textarea placeholder="Message" style="width: 100%; height: 200px; margin-bottom: 10px; border: none;"></textarea>
+        <button class="textarea_btn">Envoyer</button>
+      </div>
+    </div>
+  </div><br>
+</section>
+
+<footer id="footer" class="footer">
+  <div class="footer_block">
+    <div id="schedule" class="schedule">
+      <div class="footer_block_h1">
+        <h1 class="section-heading">Horaires:</h1>
+
+        <div class="schedule-form">
+        </div>
+
+         
+      </div>
+    </div>
+    <div class="footer_contact_block">
+        <h1>Adresse:</h1>
+        <p>Rue de Paris 123, Toulouse</p>
+        <p>+33123456789</p>
+        <p>Vincent Parrot</p>
+      </div>
+      <div class="footer_contact_block">
+        <h1>Services:</h1>
+        <p>Réparation</p>
+        <p>Peinture</p>
+        <p>Vente de voitures d'occasion</p>
+      </div>
+      <div>
+        <div id="google-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24859.136176284722!2d-0.1278!3d51.5074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM1DCsDA0JzI4LjciTiAwwrAzMicxMS41Ilc!5e0!3m2!1sen!2sus!4v1624297462245!5m2!1sen!2sus" width="300" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="footer_droits">© 2023, Toulouse Tous droits réservés</p>
+</footer>
+
+ <script>
+    $(document).ready(function() {
+      loadSchedule();
+
+      function loadSchedule() {
+        $.ajax({
+          type: 'GET',
+          url: 'load_schedule.php',
+          dataType: 'json',
+          success: function(data) {
+            let scheduleContainer = $('.schedule-form');
+            scheduleContainer.empty();
+
+            for (let i = 0; i < data.length; i++) {
+              let entry = data[i];
+              let day = entry.day;
+              let timeIntervals = entry.time_intervals;
+
+              let entryElement = '<div class="schedule-entry">' +
+  '<p>' + day + ':' +' '  + timeIntervals + '</p>' +
+  '</div>';
+
+              scheduleContainer.append(entryElement);
+            }
+          },
+          error: function() {
+            $('.schedule-form').text('Error while waiting for schedule.');
+          }
+        });
+      }
+    });
+
+
+  </script>
+</body>
+</html>

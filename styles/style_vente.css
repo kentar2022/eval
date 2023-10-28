@@ -167,13 +167,13 @@ section {
 
 .filter-field input[type="text"],
 .filter-field input[type="number"] {
-  width: 100%;
+  width: 60%;
   padding: 3,5px;
   border: 1px solid #ccc;
   border-radius: 3px;
 }
 
-.filter-form button {
+.filter-button {
   background-color: #007bff;
   color: #fff;
   border: none;
@@ -320,13 +320,16 @@ header, h1, footer {
   .filter-container{
     width:100%;
     padding: 0;
-    height: 195px;
+    height: 465px;
   }
   .filter-block{
     padding: 0;
+    flex-wrap: wrap;
+    align-content: center;
   }
   .filter-form{
     padding-top: 40px;
+    flex-direction: column;
   }
   .filter-field label{
     font-size: 22px;
@@ -342,5 +345,9 @@ header, h1, footer {
   }
   #details-content{
     font-size: 28px;
+  }
+  .filter-button {
+    left: 20%;
+    position: relative;
   }
 }

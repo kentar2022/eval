@@ -82,3 +82,94 @@ button {
   border: none; 
   margin: 0;
 }
+
+@media (max-width: 768px) {
+  nav ul li a{
+    font-size: 2.4vw !important;
+  }
+  .filter-form{
+    flex-direction: column;
+  }
+  .filter-container{
+    height: 600px;
+  }
+  .filter-button{
+
+  }
+
+}
+
+@media (max-width: 1750px){
+  nav ul li button{
+    display: none !important;
+  }
+}
+
+@media (max-width: 837px){
+  nav ul li a {
+    font-size: 3vw;
+}
+
+@media (max-width: 400px){
+nav ul li button{
+  display: none !important;
+}
+
+@media (max-width: 840px) {
+  nav ul li a {
+    font-size: 1.5vh;
+  }
+  header{
+    height: 10vh;
+  }
+}
+
+@media (max-width: 1900px){
+  nav ul li button{
+    display: none;
+  }
+  nav ul li button a{
+    font-size: 20px;
+  }
+}
+
+
+@media (max-width: 1055px) {
+  nav ul li a {
+    font-size: 2.5vw;
+  }
+
+.navbar.show {
+  display: block;
+}
+
+
+
+@media (max-width: 1700px) {
+  .navbar {
+    display: none;
+  }
+}
+
+
+@media (max-width: 1750px) {
+
+  .icon_text {
+    display: none; 
+  }
+
+  .icon{
+   display: none;
+  }
+
+  nav ul li a {
+    font-size: 3vh;
+  }
+
+  .navbar{
+    display: flex;
+    flex-direction: row;
+    margin-right: 1%;
+  }
+
+}

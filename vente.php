@@ -60,7 +60,7 @@
         <input id="minYear" name="minYear">
       </div>
 
-      <button type="button" onclick="filterAds()">Appliquer les filtres</button>
+      <button class="filter-button" type="button" onclick="filterAds()">Appliquer les filtres</button>
     </form>
   </section>
 </section>

@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$csrfToken = bin2hex(random_bytes(32));
 
 
 if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
@@ -84,7 +85,7 @@ $login = $_SESSION['login'];
           <option value="2008-01-01">2008</option>
           <option value="2009-01-01">2009</option>
           <option value="2010-01-01">2010</option>
-          <option value="2011-01-01">2011</option>
+          <option value="2011-01-01">2011</option>  
           <option value="2012-01-01">2012</option>
           <option value="2013-01-01">2013</option>
           <option value="2014-01-01">2014</option>
@@ -159,6 +160,33 @@ document.querySelector('.btn_submit').addEventListener('click', function() {
   imageXhr.open('POST', 'upload_image.php');
   imageXhr.send(imageFormData);
 });
+
+
+  
+  function getCsrfToken() {
+      return fetch('csrf_token.php')
+          .then(response => response.json())
+          .then(data => data.csrf_token);
+  }
+  
+  
+  async function submitForm() {
+      const csrfToken = await getCsrfToken();
+      
+     
+      document.getElementById('csrfToken').value = csrfToken;
+      
+      
+      const form = document.getElementById('myForm');
+      fetch(form.action, {
+          method: form.method,
+          body: new FormData(form),
+      });
+}
+ </script>
+</body>
+</html>
+
 </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>

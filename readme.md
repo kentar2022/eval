@@ -31,17 +31,21 @@ Configurer la base de données :
 
 Création des Tables de Base de Données
 Vous devez également créer les tables de la base de données. Voici les commandes SQL pour créer ces tables :
-CREATE TABLE admin (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    login VARCHAR(50) NOT NULL,
-    password VARCHAR(255) NOT NULL
-);
 
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    email VARCHAR(100) NOT NULL,
-    password VARCHAR(255) NOT NULL
-);
+
+                CREATE TABLE admin (
+                    id INT AUTO_INCREMENT PRIMARY KEY,
+                    login VARCHAR(50) NOT NULL,
+                    password VARCHAR(255) NOT NULL,
+                    salt VARCHAR(50) NOT NULL
+                );
+
+                CREATE TABLE users (
+                    id INT AUTO_INCREMENT PRIMARY KEY,
+                    email VARCHAR(100) NOT NULL,
+                    password VARCHAR(255) NOT NULL,
+                    salt VARCHAR(50) NOT NULL
+                );
 
 CREATE TABLE cars (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -78,7 +82,7 @@ Créer un administrateur pour le back-office :
 
 
 
-# INSERT INTO admin (login, password) VALUES ('admin', 'password');
+# INSERT INTO admin (login, password, salt) VALUES ('admin', 'password', 'salt');
 
 
 Créez un fichier .env.local à la racine du projet et ajoutez la configuration d'accès à votre base de données :

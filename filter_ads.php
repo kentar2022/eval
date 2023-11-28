@@ -12,33 +12,38 @@ $imageFolder = "cars_images/";
 $conn = new mysqli($db_host, $db_user, $db_password, $db_name);
 
 if ($conn->connect_error) {
-  die("Database connection eror: " . $conn->connect_error);
+    die("Database connection error: " . $conn->connect_error);
 }
-
 
 $brandFilter = isset($_GET['brand']) ? $_GET['brand'] : '';
 $priceFilter = isset($_GET['price']) ? $_GET['price'] : '';
 
-
 $sql = "SELECT * FROM cars WHERE 1=1";
 
 if (!empty($brandFilter)) {
-  $sql .= " AND brand = '$brandFilter'";
+    $sql .= " AND brand = ?";
 }
 
 if (!empty($priceFilter)) {
-  $sql .= " AND price <= '$priceFilter'";
+    $sql .= " AND price <= ?";
 }
 
-$result = $conn->query($sql);
+$stmt = $conn->prepare($sql);
 
-if ($result->num_rows > 0) {
-  while ($row = $result->fetch_assoc()) {
-   
-  }
-} else {
-  echo "No matching ads found.";
+if ($stmt === false) {
+    die("Error in preparing statement: " . $conn->error);
 }
 
-$conn->close();
+if (!empty($brandFilter)) {
+    $stmt->bind_param("s", $brandFilter);
+}
+
+if (!empty($priceFilter)) {
+    $stmt->bind_param("s", $priceFilter);
+}
+
+$stmt->execute();
+$result = $
+
+
 ?>

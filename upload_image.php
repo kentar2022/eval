@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $targetDirectory = 'cars_images/';
+  $targetDirectory = '../cars_images/';
   $targetFile = $targetDirectory . basename($_FILES['image']['name']);
   $uploadOk = 1;
   $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));

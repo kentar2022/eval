@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
      
         if (isset($_FILES['image']) && !empty($_FILES['image']['name'])) {
-            $targetDirectory = './cars_images/';
+            $targetDirectory = '../cars_images/';
             $allowedTypes = ['jpg', 'jpeg', 'png', 'gif'];
             $maxFileSize = 5242880; 
 

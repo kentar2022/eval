@@ -429,6 +429,15 @@ button {
   background-color: #C5001A;
 }
 
+.rating {
+  font-size: 14px;
+  color: #ffd700; 
+}
+
+.nickname {
+  font-weight: bold;
+  color: #000; 
+}
 
 .placeholder{
   display: flex;
@@ -504,7 +513,7 @@ button {
     font-size: 0.7em;
   }
   .block_informations_h1 h1{
-    font-size: 10vw;
+    font-size: 5vw;
   }
   .footer_block{
     flex-direction: column !important;
@@ -622,7 +631,7 @@ button a{
     display:none;
   }
   .block_avantages_element p{
-    font-size: 0.7em;
+    font-size: 1em;
   }
 
   .block_avantages_element h2{
